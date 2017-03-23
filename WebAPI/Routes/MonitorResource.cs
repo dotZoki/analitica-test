@@ -10,7 +10,7 @@ namespace WebAPI
 	public class MonitorResource
 	{
 		[RestRoute]
-		public IHttpContext HelloWorld(IHttpContext context)
+		public IHttpContext Answer(IHttpContext context)
 		{
 			context.Response.SendResponse(Encoding.UTF8.GetBytes("thump thump"));
 

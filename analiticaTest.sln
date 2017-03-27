@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{8EDC38B4-EDEA-4B5D-BD17-229E000695E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadBalancer", "LoadBalancer\LoadBalancer.csproj", "{E103D947-1B14-4E18-A3C3-32738DA9E24E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{8EDC38B4-EDEA-4B5D-BD17-229E000695E0}.Debug|x86.Build.0 = Debug|x86
 		{8EDC38B4-EDEA-4B5D-BD17-229E000695E0}.Release|x86.ActiveCfg = Release|x86
 		{8EDC38B4-EDEA-4B5D-BD17-229E000695E0}.Release|x86.Build.0 = Release|x86
+		{E103D947-1B14-4E18-A3C3-32738DA9E24E}.Debug|x86.ActiveCfg = Debug|x86
+		{E103D947-1B14-4E18-A3C3-32738DA9E24E}.Debug|x86.Build.0 = Debug|x86
+		{E103D947-1B14-4E18-A3C3-32738DA9E24E}.Release|x86.ActiveCfg = Release|x86
+		{E103D947-1B14-4E18-A3C3-32738DA9E24E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

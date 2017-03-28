@@ -30,15 +30,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Net" />
+    <Reference Include="Eneter.Messaging.Framework">
+      <HintPath>..\packages\Eneter.Messaging.Framework.7.0.2\lib\net45\Eneter.Messaging.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="Grapevine">
       <HintPath>..\packages\Grapevine.4.0.0.252\lib\net40\Grapevine.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="GrapevinePlus">
-      <HintPath>..\packages\GrapevinePlus.3.1.0\lib\net40\GrapevinePlus.dll</HintPath>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

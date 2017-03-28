@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 using System.Text;
-using Grapevine.Client;
 using Grapevine.Interfaces.Server;
 using Grapevine.Server.Attributes;
-using Grapevine.Shared;
+using RestSharp;
 
 namespace LoadBalancer
 {
@@ -19,16 +19,16 @@ namespace LoadBalancer
 			[RestRoute]
 			public IHttpContext Answer(IHttpContext context)
 			{
-				//var client = new RESTClient("localhost:8900");
-				var client = new RESTClient("www.mocky.io");
-				Console.WriteLine("=========================");
-				Console.WriteLine(context.Request.PathInfo);
-				Console.WriteLine("=========================");
-				RESTResponse response = client.Execute(new RESTRequest("/v2/58d8dd6f0f0000721fdcc7af"));
-				Console.WriteLine(response.Content);
+				if (MainClass.ActiveService == null)
+				{
+					context.Response.SendResponse(Encoding.UTF8.GetBytes("All instances down!"));
+					return context;
+				}
+				var client = new RestClient(MainClass.ActiveService);
+				var request = new RestRequest(context.Request.PathInfo, Method.GET);
+				var content = client.Execute(request).Content;
 
-				//context.Response.SendResponse(Encoding.UTF8.GetBytes("thump thump"));
-				context.Response.SendResponse(Encoding.UTF8.GetBytes(response.Content));
+				context.Response.SendResponse(Encoding.UTF8.GetBytes(content));
 
 				return context;
 			}

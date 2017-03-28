@@ -64,7 +64,7 @@ namespace LoadBalancer
 				if (!firstAliveFound)
 				{
 					Console.WriteLine("all services dead send message to admin");
-					// send message to admin
+					// send message to admin via email or smtin
 					ActiveService = null;
 				}
 
